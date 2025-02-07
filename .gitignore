@@ -1,0 +1,67 @@
+# General
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.DS_Store
+Thumbs.db
+
+# Bash scripts
+*.sh
+*.bash
+*.zsh
+*.out
+
+# PowerShell scripts
+*.psd1
+*.psm1
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.eggs/
+dist/
+build/
+*.whl
+*.db
+*.sqlite3
+*.env
+*.venv/
+*.pytest_cache/
+*.coverage
+*.mypy_cache/
+*.tox/
+*.ipynb_checkpoints/
+
+# Web applications
+node_modules/
+bower_components/
+dist/
+build/
+*.log
+*.map
+*.lock
+*.cache
+*.tmp
+*.env
+*.local
+*.DS_Store
+*.sublime-workspace
+*.sublime-project
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# Operating System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
