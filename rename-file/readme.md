@@ -6,7 +6,7 @@
 2. **Selects Files to Process:**
    It retrieves all files in that folder but explicitly excludes:
 
-   - Files with the .ps1 extension (to avoid renaming other PowerShell scripts,including itself).
+   - Files with the `.ps1` extension (to avoid renaming other PowerShell scripts,including itself).
    - The script file itself (by comparing names).
 
 3. **Renames Files:**
