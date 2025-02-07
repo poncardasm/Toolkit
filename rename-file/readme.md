@@ -10,10 +10,16 @@
    - The script file itself (by comparing names).
 
 3. **Renames Files:**
-   For each file, the script checks if the base name (without extension) already has a dash after the first word (using the regex `"^\S+-\s"`). If it does not, it splits the name by spaces and then renames the file by inserting a dash after the first word.
+
+   - For each file, the script checks if the base name (without extension) already has a dash after the first word (using the regex `"^\S+-\s"`).
+   - If it does not, it splits the name by spaces and then **renames the file by inserting a dash after the first word**.
 
 4. **Output:**
    It keeps a log of the changes and displays the list of renamed files at the end.
 
 5. **User Pause:**
    Finally, it pauses for user input, allowing you to review the output before the console window closes.
+
+## How to Use the Script
+
+Right-click the `.ps1` file and select **Run with PowerShell**. The script will execute and display the list of renamed files.
