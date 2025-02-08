@@ -1,28 +1,27 @@
-// Get references to the DOM elements
 const inputText = document.getElementById('inputText');
 const convertButton = document.getElementById('convertButton');
 const outputText = document.getElementById('outputText');
 
 // Function to transform the text and copy it to the clipboard
 function transformAndCopyText() {
-  const text = inputText.value.trim(); // Trim spaces from the beginning and end
-  const transformedText = text.toLowerCase().replace(/\s+/g, '-'); // Transform it
-  outputText.textContent = transformedText; // Display the transformed text
+  const text = inputText.value.trim();
+  const transformedText = text.toLowerCase().replace(/\s+/g, '-');
+  outputText.textContent = transformedText;
 
   // Copy the transformed text to the clipboard
   navigator.clipboard
     .writeText(transformedText)
     .then(() => {
       // Change the button to indicate success
-      convertButton.textContent = 'Text Copied!'; // Change button text
-      convertButton.style.backgroundColor = 'green'; // Change button color
-      convertButton.style.color = 'white'; // Ensure text is visible
+      convertButton.textContent = 'Text Copied!';
+      convertButton.style.backgroundColor = 'green';
+      convertButton.style.color = 'white';
 
       // Revert the button back to its original state after 2 seconds
       setTimeout(() => {
-        convertButton.textContent = 'Convert'; // Reset button text
-        convertButton.style.backgroundColor = '#007bff'; // Reset button color
-        convertButton.style.color = 'white'; // Reset text color
+        convertButton.textContent = 'Convert';
+        convertButton.style.backgroundColor = '#007bff';
+        convertButton.style.color = 'white';
       }, 3000);
     })
     .catch((err) => {
@@ -31,17 +30,18 @@ function transformAndCopyText() {
 }
 
 // Function to enable or disable the Convert button based on input
+// Disable the button if the text area is empty
 function toggleButtonState() {
-  const text = inputText.value.trim(); // Get the trimmed value of the text area
+  const text = inputText.value.trim();
   if (text === '') {
-    convertButton.disabled = true; // Disable the button if the text area is empty
-    convertButton.style.backgroundColor = '#6c757d'; // Change to a disabled color (gray)
-    convertButton.style.cursor = 'not-allowed'; // Change cursor to indicate it's disabled
-    outputText.textContent = ''; // Clear the output text if the text area is empty
+    convertButton.disabled = true;
+    convertButton.style.backgroundColor = '#6c757d';
+    convertButton.style.cursor = 'not-allowed';
+    outputText.textContent = '';
   } else {
-    convertButton.disabled = false; // Enable the button if there's text
-    convertButton.style.backgroundColor = '#007bff'; // Reset to the original blue color
-    convertButton.style.cursor = 'pointer'; // Reset cursor to pointer
+    convertButton.disabled = false;
+    convertButton.style.backgroundColor = '#007bff';
+    convertButton.style.cursor = 'pointer';
   }
 }
 
